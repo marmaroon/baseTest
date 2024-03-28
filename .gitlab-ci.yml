@@ -1,0 +1,14 @@
+image: node:20
+
+stages:
+  - test
+
+before_script:
+  - npm install
+
+test:
+  stage: test
+  script:
+    - npm test
+  only:
+    - master
